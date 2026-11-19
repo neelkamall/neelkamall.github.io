@@ -8,31 +8,178 @@
 </head>
 <body>
 
-  <!-- Hilta hua background yahan draw hoga -->
   <canvas id="bg"></canvas>
 
-  <!-- Left side ka menu -->
+  <!-- Left menu (mobile par neeche aa jata hai) -->
   <nav>
     <div class="logo">NK</div>
     <a href="#home" class="on">Home</a>
     <a href="#about">About</a>
-    <a href="#experience">Experience</a>
+    <a href="#experience">Exp</a>
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <main>
-    <!-- HOME SECTION -->
-    <section id="home">
-      <p class="open">● Open to Opportunities</p>
-      <h1>Hi, I’m<br><span class="grad">Neel Kamal</span></h1>
-      <h3>Backend Developer & AI Enthusiast</h3>
-      <p class="sub">Building scalable backend systems and exploring the world of Artificial Intelligence.</p>
-      <a href="#projects" class="btn">Explore My Work →</a>
-    </section>
-  </main>
 
-  <script src="script.js"></script>
-</body>
-</html>
+    <!-- ============ HOME ============ -->
+    <section id="home" class="hero">
+      <div class="rv">
+        <p class="open"><i></i> Open to Opportunities</p>
+        <h1>Hi, I’m<br><span class="grad">Neel Kamal</span></h1>
+        <h3>Backend Developer & AI Enthusiast</h3>
+        <p class="sub">Building scalable backend systems and exploring the world of Artificial Intelligence.</p>
+        <a href="#projects" class="btn">Explore My Work →</a>
+        <!-- Resume ready ho to: <a href="resume.pdf" class="btn ghost">Download Resume</a> -->
+      </div>
+      <div class="globe-wrap rv">
+        <div class="ring"></div>
+        <div class="globe"></div>
+        <span class="chip" style="left:5%;top:12%">FastAPI</span>
+        <span class="chip" style="right:0;top:6%;animation-delay:-2s">Python</span>
+        <span class="chip" style="left:8%;bottom:10%;animation-delay:-4s">Node.js</span>
+        <span class="chip" style="right:4%;bottom:14%;animation-delay:-6s">AI / RAG</span>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about">
+      <p class="tag rv">About Me</p>
+      <h2 class="rv">Turning Ideas into <span class="grad">Scalable</span> Solutions.</h2>
+      <div class="about-grid">
+        <div class="rv">
+          <p class="bio">
+            I’m a Backend Developer with a strong foundation in Computer Applications,
+            specializing in Python, Node.js and AI. I love building efficient systems,
+            solving real-world problems and continuously learning new technologies.
+          </p>
+          <div class="pills">
+            <span>BCA Graduate</span>
+            <span>MCA Pursuing</span>
+            <span>Hyderabad, India</span>
+          </div>
+          <div class="stats">
+            <div class="stat"><b>1+</b><small>Years of Learning</small></div>
+            <div class="stat"><b>5+</b><small>Projects Built</small></div>
+            <div class="stat"><b>∞</b><small>Dreams to Achieve</small></div>
+          </div>
+        </div>
+        <!-- Photo ready ho to NK ki jagah: <img src="photo.jpg" alt="Neel Kamal"> -->
+        <div class="photo rv">NK</div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section id="experience">
+      <p class="tag rv">My Journey</p>
+      <h2 class="rv">Experience & <span class="grad">Education</span></h2>
+      <div class="exp-grid">
+        <div class="timeline rv">
+          <!-- Naya item add karna ho to ye poora <div class="item"> copy karo -->
+          <div class="item">
+            <small>2025 – Present</small>
+            <h4>Master of Computer Applications (MCA)</h4>
+            <p>JGI Jain University, Online</p>
+          </div>
+          <div class="item">
+            <small>2022 – 2025</small>
+            <h4>Bachelor of Computer Applications (BCA)</h4>
+            <p>Apna college ka naam yahan likho</p>
+          </div>
+          <div class="item">
+            <small>2025 (Internship)</small>
+            <h4>Backend Developer Intern – SAIL</h4>
+            <p>Worked on backend development and REST APIs.</p>
+          </div>
+          <div class="item">
+            <small>2025 (Internship)</small>
+            <h4>Teckat Technologies</h4>
+            <p>Contributed to real-world development projects.</p>
+          </div>
+        </div>
+        <div class="card learn rv">
+          <h4>What I’ve Learned?</h4>
+          <ul>
+            <li>Backend Development</li>
+            <li>REST APIs & Authentication</li>
+            <li>Database Management</li>
+            <li>Problem Solving</li>
+            <li>Team Collaboration</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects">
+      <p class="tag rv">My Work</p>
+      <h2 class="rv">Featured <span class="grad">Projects</span></h2>
+
+      <div class="filters rv">
+        <button class="on" data-f="all">All</button>
+        <button data-f="web">Web Apps</button>
+        <button data-f="ai">AI / ML</button>
+      </div>
+
+      <div class="proj-grid">
+        <!-- Naya project: poore <div class="card proj"> block ko copy karke neeche paste karo -->
+        <div class="card proj" data-t="web">
+          <div class="shot">🛒<em class="st live">Live</em></div>
+          <h4>Bazario</h4>
+          <p>E-commerce platform with secure authentication.</p>
+          <div class="tags"><span>Node.js</span><span>MongoDB</span><span>Express</span></div>
+          <div class="links"><a href="#">View Code</a><a href="#">Live Demo ↗</a></div>
+        </div>
+
+        <div class="card proj" data-t="web">
+          <div class="shot s2">🔥<em class="st live">Live</em></div>
+          <h4>Beast</h4>
+          <p>Social media app with modern features.</p>
+          <div class="tags"><span>Python</span><span>FastAPI</span></div>
+          <div class="links"><a href="#">View Code</a><a href="#">Live Demo ↗</a></div>
+        </div>
+
+        <div class="card proj" data-t="web">
+          <div class="shot s3">🗄️<em class="st live">Live</em></div>
+          <h4>ViewVault</h4>
+          <p>A secure place to store and manage your files.</p>
+          <div class="tags"><span>React</span><span>Node.js</span></div>
+          <div class="links"><a href="#">View Code</a><a href="#">Live Demo ↗</a></div>
+        </div>
+
+        <div class="card proj" data-t="ai">
+          <div class="shot s4">🤖<em class="st">In Progress</em></div>
+          <h4>AI Tutor</h4>
+          <p>NCERT History doubt-solver using LLM APIs and RAG.</p>
+          <div class="tags"><span>Python</span><span>LLM</span><span>RAG</span></div>
+          <div class="links"><a href="#">View Code</a><a href="#">Live Demo ↗</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills">
+      <p class="tag rv">My Skills</p>
+      <h2 class="rv">Tech Stack & <span class="grad">Skills</span></h2>
+
+      <div class="skill-grid">
+        <!-- Naya skill: ek <div class="row"> copy karo. data-w = level (0 se 100) -->
+        <div class="card sk rv">
+          <h4>⚙️ Backend</h4>
+          <div class="row"><div>Node.js <small>Intermediate</small></div><div class="bar"><i data-w="80"></i></div></div>
+          <div class="row"><div>Express.js <small>Intermediate</small></div><div class="bar"><i data-w="80"></i></div></div>
+          <div class="row"><div>Python <small>Intermediate</small></div><div class="bar"><i data-w="75"></i></div></div>
+          <div class="row"><div>FastAPI <small>Intermediate</small></div><div class="bar"><i data-w="70"></i></div></div>
+        </div>
+
+        <div class="card sk rv">
+          <h4>🗄️ Database</h4>
+          <div class="row"><div>MongoDB <small>Intermediate</small></div><div class="bar"><i data-w="75"></i></div></div>
+          <div class="row"><div>PostgreSQL <small>Beginner</small></div><div class="bar"><i data-w="55"></i></div></div>
+        </div>
+
+        <div class="card sk rv">
+          <h4>🎨 Frontend</h4>
+          <div class="row"><div>JavaScript <small>Intermediate</small></div><div class="bar"><i data-w="75"></i></div></div>
+          <div class="row"><div>HTML & CSS
