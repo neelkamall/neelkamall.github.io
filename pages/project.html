@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Neel Kamal</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- shared -->
+  <link rel="stylesheet" href="../shared/based.css" />
+  <link rel="stylesheet" href="../shared/background.css" />
+  <link rel="stylesheet" href="../shared/sidebar.css" />
+  <!-- page -->
+  <link rel="stylesheet" href="project.css" />
+</head>
+
+<body data-page="projects">
+
+  <canvas id="bg-canvas"></canvas>
+  <div id="sidebar-root"></div>
+
+  <main class="page">
+    <section class="projects">
+
+      <div class="proj-head">
+        <div>
+          <span class="eyebrow"><i></i> My Work</span>
+          <h1 class="proj-title">Featured Projects</h1>
+        </div>
+
+        <div class="filters" id="filters">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="web">Web</button>
+          <button class="filter" data-filter="ai">AI</button>
+        </div>
+      </div>
+
+      <div class="grid" id="grid"></div>
+
+      <p class="empty" id="empty" hidden>Is category mein abhi koi project nahi hai.</p>
+
+    </section>
+  </main>
+
+  <script src="../shared/background.js"></script>
+  <script src="../shared/sidebar.js"></script>
+  <script src="../scripts/project.js"></script>
+</body>
+</html>

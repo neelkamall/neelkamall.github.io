@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills — Neel Kamal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../shared/based.css" />
+  <link rel="stylesheet" href="../shared/background.css" />
+  <link rel="stylesheet" href="../shared/sidebar.css" />
+  <link rel="stylesheet" href="skills.css" />
+</head>
+<body data-page="skills">
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div id="sidebar-root"></div>
+
+  <main class="page skills-page">
+    <div class="skills-container">
+      <!-- Header -->
+      <header class="skills-header">
+        <p class="eyebrow">TECHNICAL ARSENAL</p>
+        <h1 class="skills-title">My <span class="grad-text">Skills</span></h1>
+        <p class="skills-sub">
+          Technologies, tools and concepts I use to build scalable backend systems and modern applications.
+        </p>
+
+        <div class="view-switcher-wrap">
+          <div class="view-switcher" role="tablist" aria-label="Skills view mode">
+            <button type="button" class="view-btn active" data-view="orbital" role="tab" aria-selected="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="3" />
+                <ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(-24 12 12)" />
+              </svg>
+              <span>Orbital</span>
+            </button>
+
+            <button type="button" class="view-btn" data-view="categories" role="tab" aria-selected="false">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="7" height="7" rx="1.5" />
+                <rect x="14" y="3" width="7" height="7" rx="1.5" />
+                <rect x="3" y="14" width="7" height="7" rx="1.5" />
+                <rect x="14" y="14" width="7" height="7" rx="1.5" />
+              </svg>
+              <span>Categories</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="skills-meta-bar">
+          <span>01 — TECH STACK</span>
+          <span>CONTINUOUSLY LEARNING</span>
+        </div>
+      </header>
+
+      <!-- Orbital View (Default) -->
+      <section class="orbital-view active" id="orbitalView" aria-label="Orbital skills map">
+        <div class="orbital-stage" id="orbitalStage">
+          <div class="orbit-ring ring-1"></div>
+          <div class="orbit-ring ring-2"></div>
+          <div class="orbit-ring ring-3"></div>
+
+          <div class="orbit-core" aria-label="Core stack">
+            <span>CORE</span>
+          </div>
+
+          <div class="orbit-nodes" id="orbitNodes"></div>
+        </div>
+
+        <p class="orbital-hint" id="orbitalHint">
+          Hover or tap any skill pill to inspect its category.
+        </p>
+      </section>
+
+      <!-- Categories View -->
+      <section class="categories-view" id="categoriesView" aria-label="Categorized skills" hidden>
+        <div class="skills-grid" id="skillsGrid"></div>
+
+        <section class="panel-box exploring-box" aria-labelledby="exploringHeading">
+          <div class="exploring-left">
+            <p class="panel-eyebrow">CURRENTLY EXPLORING</p>
+            <h2 id="exploringHeading" class="panel-title">
+              Learning. <span class="grad-text">Building.</span> Evolving.
+            </h2>
+            <p class="panel-desc">
+              My journey doesn't stop at what I know. I'm constantly learning new technologies and improving my backend and AI skills.
+            </p>
+          </div>
+
+          <ul class="exploring-list" id="exploringList" aria-label="Topics currently exploring"></ul>
+        </section>
+
+        <section class="panel-box cta-box" aria-labelledby="ctaHeading">
+          <div class="cta-left">
+            <p class="panel-eyebrow">HAVE A PROJECT IN MIND?</p>
+            <h2 id="ctaHeading" class="panel-title">
+              Let's build something <span class="grad-text">meaningful.</span>
+            </h2>
+          </div>
+
+          <a href="contact.html" class="cta-btn">
+            <span>Let's Connect</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 17L17 7M8 7h9v9" />
+            </svg>
+          </a>
+        </section>
+      </section>
+
+      <!-- Footer -->
+      <footer class="skills-footer">
+        <span>© 2026 NEEL KAMAL</span>
+        <span>DESIGNED TO BUILD · BUILT TO EVOLVE</span>
+      </footer>
+    </div>
+  </main>
+
+  <script src="../shared/background.js"></script>
+  <script src="../shared/sidebar.js"></script>
+  <script src="../scripts/skills.js"></script>
+</body>
+</html>

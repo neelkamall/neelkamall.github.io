@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neel Kamal | Backend Developer & AI Enthusiast</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- shared -->
+  <link rel="stylesheet" href="../shared/based.css" />
+  <link rel="stylesheet" href="../shared/background.css" />
+  <link rel="stylesheet" href="../shared/sidebar.css" />
+  <!-- page -->
+  <link rel="stylesheet" href="home.css" />
+
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+
+<body data-page="home">
+
+  <!-- animated background (stars + graph) : shared/background.js -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- sidebar gets injected here : shared/sidebar.js -->
+  <div id="sidebar-root"></div>
+
+  <main class="page">
+
+    <!-- ===================== HOME ===================== -->
+    <section class="hero" id="home">
+      <div class="hero-left">
+        <span class="badge"><i class="dot"></i> Open to Opportunities</span>
+
+        <h1 class="hero-title">
+          <span class="hi">Hi, I’m</span>
+          <span class="name">Neel Kamal</span>
+        </h1>
+
+        <h2 class="hero-role">Backend Developer &amp; AI Enthusiast</h2>
+
+        <p class="hero-desc">
+          Building scalable backend systems and exploring the world of Artificial Intelligence.
+        </p>
+
+        <div class="hero-actions">
+          <a href="project.html" class="btn btn-primary">
+            Explore My Work
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="../assests/Neel_Kamal_Resume.pdf" class="btn btn-ghost" download>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>
+            Download Resume
+          </a>
+        </div>
+
+        <div class="hero-location">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          Hyderabad, India
+        </div>
+      </div>
+
+      <!-- 3D globe scene -->
+      <div class="hero-right">
+        <div class="scene" id="scene">
+
+          <div class="globe">
+            <div class="globe-glow"></div>
+            <div class="globe-core"></div>
+
+            <div class="globe-spin">
+              <!-- meridians -->
+              <span class="mer" style="--a:0deg"></span>
+              <span class="mer" style="--a:30deg"></span>
+              <span class="mer" style="--a:60deg"></span>
+              <span class="mer" style="--a:90deg"></span>
+              <span class="mer" style="--a:120deg"></span>
+              <span class="mer" style="--a:150deg"></span>
+              <!-- latitudes -->
+              <span class="lat" style="--y:0px;--w:320px"></span>
+              <span class="lat" style="--y:80px;--w:277px"></span>
+              <span class="lat" style="--y:-80px;--w:277px"></span>
+              <span class="lat" style="--y:125px;--w:200px"></span>
+              <span class="lat" style="--y:-125px;--w:200px"></span>
+              <!-- glowing nodes -->
+              <i class="node" style="--ry:20deg;--rx:30deg"></i>
+              <i class="node" style="--ry:75deg;--rx:-20deg"></i>
+              <i class="node" style="--ry:140deg;--rx:40deg"></i>
+              <i class="node" style="--ry:200deg;--rx:-35deg"></i>
+              <i class="node" style="--ry:250deg;--rx:15deg"></i>
+              <i class="node" style="--ry:310deg;--rx:-45deg"></i>
+              <i class="node" style="--ry:340deg;--rx:55deg"></i>
+              <i class="node" style="--ry:110deg;--rx:-60deg"></i>
+            </div>
+          </div>
+
+          <!-- tilted orbit ring -->
+          <div class="orbit"><i class="orbit-dot"></i></div>
+
+          <!-- floating tech chips -->
+          <div class="chip chip-fastapi"><span class="ci ci-fastapi">⚡</span> FastAPI</div>
+          <div class="chip chip-python"><span class="ci ci-python">🐍</span> Python</div>
+          <div class="chip chip-node"><span class="ci ci-node">⬢</span> Node.js</div>
+          <div class="chip chip-ai"><span class="ci ci-ai">✦</span> AI / RAG</div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-hint" aria-label="Scroll to about">
+        <span class="mouse"><i></i></span>
+        Scroll to explore
+      </a>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="about" id="about">
+      <div class="about-left reveal">
+        <span class="eyebrow"><i></i> About Me</span>
+
+        <h2 class="about-title">
+          Turning Ideas<br />into <span class="accent">Scalable</span> Solutions.
+        </h2>
+
+        <p class="about-text">
+          I’m a Backend Developer with a strong foundation in Computer Applications,
+          specializing in Python, Node.js and AI. I love building efficient systems,
+          solving real-world problems and continuously learning new technologies.
+        </p>
+
+        <div class="tags">
+          <span class="tag">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-5 9 5-9 5-9-5z"/><path d="M7 11.5V16c0 1.4 2.2 3 5 3s5-1.6 5-3v-4.5"/></svg>
+            BCA Graduate
+          </span>
+          <span class="tag">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-5 9 5-9 5-9-5z"/><path d="M7 11.5V16c0 1.4 2.2 3 5 3s5-1.6 5-3v-4.5"/></svg>
+            MCA Pursuing
+          </span>
+          <span class="tag">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            Hyderabad, India
+          </span>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <strong data-count="1" data-suffix="+">1+</strong>
+            <span>Years of Learning</span>
+          </div>
+          <div class="stat">
+            <strong data-count="5" data-suffix="+">5+</strong>
+            <span>Projects Built</span>
+          </div>
+          <div class="stat">
+            <strong>∞</strong>
+            <span>Dreams to Achieve</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-right reveal">
+        <div class="photo-wrap" id="photoWrap">
+          <span class="photo-ring pr1"></span>
+          <span class="photo-ring pr2"></span>
+          <div class="photo-frame">
+            <img src="../assests/professional photo.jpeg" alt="Neel Kamal" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- shared -->
+  <script src="../shared/background.js"></script>
+  <script src="../shared/sidebar.js"></script>
+  <!-- page -->
+  <script src="../scripts/home.js"></script>
+</body>
+</html>

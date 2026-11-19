@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience — Neel Kamal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../shared/based.css" />
+  <link rel="stylesheet" href="../shared/background.css" />
+  <link rel="stylesheet" href="../shared/sidebar.css" />
+  <link rel="stylesheet" href="experience.css" />
+</head>
+<body data-page="experience">
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div id="sidebar-root"></div>
+
+  <main class="page exp-page">
+    <div class="exp-container">
+      <!-- Header -->
+      <header class="exp-header">
+        <p class="eyebrow">CAREER &amp; INTERNSHIPS</p>
+        <h1 class="exp-title">My <span class="grad-text">Experience</span></h1>
+        <p class="exp-sub">
+          Backend engineering internship experience at Teckat in Jamshedpur and onsite client deployment at SAIL's RDCIS in Ranchi.
+        </p>
+        <div class="exp-meta-bar">
+          <span>02 — EXPERIENCE TIMELINE</span>
+          <span>MAY 2025 – JUNE 2026</span>
+        </div>
+      </header>
+
+      <!-- Summary Strip -->
+      <section class="exp-summary" aria-label="Experience summary">
+        <div class="summary-card">
+          <span class="summary-label">TIMELINE</span>
+          <strong class="summary-value">May 2025 – June 2026</strong>
+        </div>
+        <div class="summary-card">
+          <span class="summary-label">ORGANIZATION</span>
+          <strong class="summary-value">Teckat Private Service Ltd.</strong>
+        </div>
+        <div class="summary-card">
+          <span class="summary-label">CLIENT &amp; LOCATIONS</span>
+          <strong class="summary-value">SAIL (RDCIS), Ranchi &amp; Jamshedpur</strong>
+        </div>
+      </section>
+
+      <!-- Timeline Cards (rendered by ../scripts/experience.js) -->
+      <section class="exp-timeline" id="expTimeline" aria-label="Work experience timeline"></section>
+
+      <!-- CTA Banner -->
+      <section class="panel-box" aria-labelledby="expCtaHeading">
+        <div>
+          <p class="panel-eyebrow">WANT TO SEE WHAT I BUILT?</p>
+          <h2 id="expCtaHeading" class="panel-title">
+            Explore my <span class="grad-text">projects</span> or reach out.
+          </h2>
+        </div>
+
+        <div class="cta-actions">
+          <a href="project.html" class="cta-btn cta-secondary">
+            <span>View Projects</span>
+          </a>
+          <a href="contact.html" class="cta-btn">
+            <span>Let's Connect</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 17L17 7M8 7h9v9" />
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="exp-footer">
+        <span>© 2026 NEEL KAMAL</span>
+        <span>BACKEND &amp; AI INTEGRATION</span>
+      </footer>
+    </div>
+  </main>
+
+  <script src="../shared/background.js"></script>
+  <script src="../shared/sidebar.js"></script>
+  <script src="../scripts/experience.js"></script>
+</body>
+</html>

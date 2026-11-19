@@ -1,0 +1,28 @@
+/* =========================================================
+   background.css  —  stars + graph canvas (fixed, peeche rehta hai)
+   ========================================================= */
+
+#bg-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;   /* click/scroll page tak jaane do */
+  display: block;
+}
+
+/* upar-neeche halka vignette taaki text clear dikhe */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 50% 50%, transparent 55%, rgba(0, 0, 8, 0.55) 100%);
+}
+
+:root[data-theme="light"] body::before {
+  background: radial-gradient(ellipse at 50% 50%, transparent 60%, rgba(120, 150, 220, 0.25) 100%);
+}

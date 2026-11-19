@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Neel Kamal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../shared/based.css" />
+  <link rel="stylesheet" href="../shared/background.css" />
+  <link rel="stylesheet" href="../shared/sidebar.css" />
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body data-page="contact">
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div id="sidebar-root"></div>
+
+  <main class="page contact-page">
+    <div class="contact-container">
+      <!-- Hero / First View -->
+      <section class="contact-hero" aria-labelledby="contactHeading">
+        <div class="contact-left">
+          <div class="contact-eyebrow-row">
+            <span class="eyebrow-line" aria-hidden="true"></span>
+            <span class="eyebrow-text">Get in Touch</span>
+            <span class="eyebrow-line" aria-hidden="true"></span>
+          </div>
+
+          <h1 id="contactHeading" class="contact-heading">
+            Have <span class="muted-word">an interesting</span><br />
+            project in mind?
+          </h1>
+
+          <p class="contact-sub">
+            Let's build <span class="muted-word">something</span> amazing together.
+          </p>
+
+          <div class="contact-actions">
+            <a href="#connectDetails" class="contact-btn">
+              <span>Contact Me</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+
+            <button type="button" class="copy-email-btn" id="copyEmailBtn" data-email="neelkamal3767@gmail.com">
+              Copy Email
+            </button>
+          </div>
+        </div>
+
+        <!-- Middle Info Card (rendered by ../scripts/contact.js) -->
+        <aside class="info-card" id="connectDetails" aria-label="Contact information"></aside>
+
+        <!-- Right Glowing Envelope Art -->
+        <div class="envelope-stage" aria-hidden="true">
+          <div class="orbit-ring r1"></div>
+          <div class="orbit-ring r2"></div>
+          <div class="envelope-glow"></div>
+          <svg class="envelope-svg" viewBox="0 0 180 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="envGrad" x1="20" y1="20" x2="160" y2="120" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#7ab4ff" />
+                <stop offset="55%" stop-color="#2f7bff" />
+                <stop offset="100%" stop-color="#1b4fd8" />
+              </linearGradient>
+              <linearGradient id="flapGrad" x1="22" y1="24" x2="158" y2="86" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#9cc8ff" />
+                <stop offset="100%" stop-color="#3d8bff" />
+              </linearGradient>
+            </defs>
+            <rect x="20" y="24" width="140" height="94" rx="16" fill="rgba(16, 44, 125, 0.45)" stroke="url(#envGrad)" stroke-width="3.5" />
+            <path d="M25 31L90 80L155 31" stroke="url(#flapGrad)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M26 112L73 70" stroke="url(#envGrad)" stroke-width="2.5" stroke-linecap="round" opacity="0.7" />
+            <path d="M154 112L107 70" stroke="url(#envGrad)" stroke-width="2.5" stroke-linecap="round" opacity="0.7" />
+          </svg>
+        </div>
+      </section>
+
+      <!-- Slide Down / Bottom Watermark & Footer Section -->
+      <section class="bottom-brand-section" aria-label="Brand showcase and footer">
+        <div class="watermark-wrap" aria-hidden="true">
+          <span class="watermark-name">NEEL KAMAL</span>
+        </div>
+
+        <div class="quick-socials" id="quickSocials" aria-label="Quick social links"></div>
+
+        <footer class="contact-footer">
+          <span>© 2026 Neel Kamal. All rights reserved.</span>
+          <span>Backend &amp; AI Integration</span>
+        </footer>
+      </section>
+    </div>
+  </main>
+
+  <script src="../shared/background.js"></script>
+  <script src="../shared/sidebar.js"></script>
+  <script src="../scripts/contact.js"></script>
+</body>
+</html>
