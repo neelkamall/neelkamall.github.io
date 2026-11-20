@@ -6,39 +6,6 @@
    ========================================================= */
 
 (function () {
-  const NK_LOGO_SVG = `
-    <svg class="nk-brand-svg" viewBox="0 0 156 88" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <linearGradient id="nkNeonFill" x1="12" y1="8" x2="144" y2="80" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stop-color="#8ce8ff" />
-          <stop offset="48%" stop-color="#28b8ff" />
-          <stop offset="100%" stop-color="#1465e8" />
-        </linearGradient>
-        <linearGradient id="nkNeonEdge" x1="16" y1="10" x2="142" y2="78" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stop-color="#d8fbff" />
-          <stop offset="55%" stop-color="#58d6ff" />
-          <stop offset="100%" stop-color="#2b82ff" />
-        </linearGradient>
-      </defs>
-
-      <!-- Outer glowing base shape -->
-      <g stroke="url(#nkNeonEdge)" stroke-width="2.2" stroke-linejoin="round">
-        <!-- Left N -->
-        <path d="M16 14H28L66 56V14H78V74H65L28 33V74H16V14Z" fill="url(#nkNeonFill)" fill-opacity="0.24" />
-        <!-- Center diamond negative/inner accent -->
-        <polygon points="72,22 79,39 72,56 65,39" fill="#050b24" fill-opacity="0.88" stroke="#6ee2ff" stroke-width="1.8" />
-        <!-- Right K -->
-        <path d="M84 14H97V40L128 14H144L107 44L145 74H128L97 49V74H84V14Z" fill="url(#nkNeonFill)" fill-opacity="0.26" />
-      </g>
-
-      <!-- Crisp inner neon core lines -->
-      <g stroke="#b8f4ff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.92">
-        <path d="M21 19H25.5L69.5 67.5V19H73.5V69H68L25.5 22V69H21V19Z" />
-        <path d="M88.5 19H93V44.5L131.5 19H137.5L101.5 44.5L138 69H131.5L93 45.5V69H88.5V19Z" />
-      </g>
-    </svg>
-  `;
-
   const ICONS = {
     home:       '<path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/>',
     experience: '<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2M3 13h18"/>',
@@ -54,6 +21,9 @@
 
   const svg = (name) =>
     `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">${ICONS[name]}</svg>`;
+
+  /* logo ki image ka path (sab pages pages/ folder ke andar hain) */
+  const LOGO_SRC = "../assests/logo.png";
 
   /* file names alag ho to yahan href badal do */
   const LINKS = [
@@ -77,7 +47,9 @@
 
   root.innerHTML = `
     <aside class="sidebar">
-      <a href="home.html" class="sb-logo" aria-label="Home">${NK_LOGO_SVG}</a>
+      <a href="home.html" class="sb-logo" aria-label="Neel Kamal - Home">
+        <img src="${LOGO_SRC}" alt="NK" width="96" height="65" />
+      </a>
 
       <nav class="sb-nav">
         ${LINKS.map(l => `
