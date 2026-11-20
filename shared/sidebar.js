@@ -1,5 +1,5 @@
 /* =========================================================
-   sidebar.js  —  sidebar inject + active link + theme toggle
+   sidebar.js  —  sidebar inject + active link
    Har page pe <div id="sidebar-root"></div> hona chahiye
    aur <body data-page="home | experience | projects | skills | contact">
    Sidebar ke links alag-alag pages kholte hain (scroll nahi)
@@ -14,9 +14,7 @@
     contact:    '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>',
     github:     '<path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 00-1.3-3.2 4.2 4.2 0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 00-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 00-.1 3.2A4.6 4.6 0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/>',
     linkedin:   '<path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 2a2 2 0 110 4 2 2 0 010-4z"/>',
-    mail:       '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>',
-    sun:        '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',
-    moon:       '<path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/>'
+    mail:       '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>'
   };
 
   const svg = (name) =>
@@ -63,23 +61,5 @@
           <a href="${s.href}" target="_blank" rel="noopener" aria-label="${s.label}">${svg(s.name)}</a>`).join("")}
       </div>
     </aside>
-
-    <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">
-      <span class="sun">${svg("sun")}</span>
-      <span class="moon">${svg("moon")}</span>
-    </button>
   `;
-
-  /* ---------- theme toggle ---------- */
-  const html = document.documentElement;
-  try {
-    const saved = localStorage.getItem("nk-theme");
-    if (saved) html.setAttribute("data-theme", saved);
-  } catch (e) {}
-
-  document.getElementById("themeBtn").addEventListener("click", () => {
-    const next = html.getAttribute("data-theme") === "light" ? "dark" : "light";
-    html.setAttribute("data-theme", next);
-    try { localStorage.setItem("nk-theme", next); } catch (e) {}
-  });
 })();

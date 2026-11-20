@@ -236,6 +236,7 @@ section.about {
   font-size: 14px;
   background: rgba(255,255,255,.06);
 }
+.ci img { width: 16px; height: 16px; display: block; }   /* real tech logos */
 .ci-fastapi { color: #19d3b0; }
 .ci-python  { color: #ffd343; }
 .ci-node    { color: #6cc24a; }

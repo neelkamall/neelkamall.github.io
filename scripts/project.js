@@ -7,7 +7,8 @@
 (function () {
   /* ---------------- DATA (yahan edit karo) ----------------
      category : ["web" | "ai"]  (ek ya dono)
-     status   : badge ka text (jaise "Full-Stack", "Backend", "AI")
+     status   : badge ka text. "In Progress" likhoge to orange badge
+                + thumbnail ke left side pe orange banner aa jayega
      art      : "social" | "shop" | "blog" | "analyst" | ""
      image    : "" rakho to art dikhega,
                 real screenshot ho to "../assests/beast.png" likho
@@ -29,39 +30,39 @@
     },
     {
       title: "Bazario",
-      desc: "A backend e-commerce app. Users can browse products, search, add items to the cart and place orders after logging in. The React frontend talks to an Express and MongoDB Atlas backend, and order prices are recalculated on the server so they can't be tampered with.",
+      desc: "The backend of an e-commerce application, built with Node.js, Express and MongoDB. It exposes a REST API for products, carts and orders with full CRUD operations, and users can sign up and log in securely.",
       points: [
-        "JWT authentication, bcrypt password hashing and Zod validation",
-        "Server-side price calculation for every order",
-        "6 pages: Home, Product Details, Cart, Login, Signup, Order Success"
+        "REST API with full CRUD for products and orders",
+        "JWT authentication with bcrypt password hashing",
+        "Cart and order management for logged-in users"
       ],
-      tags: ["React", "Node.js", "Express", "MongoDB", "JWT"],
+      tags: ["Node.js", "Express", "MongoDB", "REST API", "JWT", "bcrypt"],
       category: ["web"], status: "Backend", accent: "#2f7bff", art: "shop", image: "",
-      code: "https://github.com/neelkamall/Bazario", demo: ""
+      code: "https://github.com/neelkamall/Bazario-Backend", demo: ""
     },
     {
       title: "Blogger",
-      desc: "A Backend social media platform with an Instagram-style, responsive dark and teal interface. Users can sign up, create posts, comment and search. The backend also handles secure JWT authentication.",
+      desc: "The backend of a blogging application, built with Node.js, Express and MongoDB. Users can sign up, log in, and create, read, update and delete blog posts and comments through a REST API.",
       points: [
-        "JWT with refresh tokens, Passport.js strategy and Zod validation",
-        "Razorpay payment flow with HMAC signature verification",
-        "Regex search, cascade delete and aggregation pipelines"
+        "REST API with full CRUD for blog posts and comments",
+        "JWT authentication with bcrypt password hashing",
+        "Users can create, edit and delete their own posts"
       ],
-      tags: ["React", "Node.js", "Express", "MongoDB"],
+      tags: ["Node.js", "Express", "MongoDB", "REST API", "JWT", "bcrypt"],
       category: ["web"], status: "Backend", accent: "#19c6d3", art: "blog", image: "",
       code: "https://github.com/neelkamall", demo: ""
     },
     {
       title: "AI Data Analyst",
-      desc: "An AI-powered data analyst that lets you ask questions about your data in plain English and get quick answers, summaries and insights without writing any analysis code.",
+      desc: "An AI data analyst agent that is currently under development. Upload a CSV or Excel file, ask questions in plain English, and the agent uses an LLM with tool calling to analyze the data and return answers and insights.",
       points: [
-        "Ask questions in natural language instead of writing queries",
-        "Turns raw data into clear summaries and insights",
-        "Built on an LLM API with Python"
+        "Upload CSV / Excel files and ask questions in natural language",
+        "LLM with tool calling decides how to analyze the data",
+        "Planned next: PDF and image inputs"
       ],
-      tags: ["Python", "LLM API", "Pandas"],
-      category: ["ai"], status: "AI", accent: "#19d3a0", art: "analyst", image: "",
-      code: "https://github.com/neelkamall", demo: ""
+      tags: ["Python", "FastAPI", "Gemini API", "Tool Calling", "Agentic AI"],
+      category: ["ai"], status: "In Progress", accent: "#19d3a0", art: "analyst", image: "",
+      code: "", demo: ""
     }
   ];
 
@@ -79,6 +80,7 @@
   const I_CART    = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.700 12.400a2 2 0 002 1.600h8.600a2 2 0 002-1.500L22 7H6"/></svg>';
 
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const isWip = (p) => /progress/i.test(p.status);
 
   /* ---------------- themed art ---------------- */
   const post = () => `
@@ -165,8 +167,8 @@
                <span class="bar b1"></span><span class="bar b2"></span><span class="bar b3"></span>
                <span class="block"></span>`;
     }
-    const wip = /progress/i.test(p.status) ? " wip" : "";
-    return `<div class="thumb">${inner}<span class="status${wip}">${esc(p.status)}</span></div>`;
+    const wip = isWip(p);
+    return `<div class="thumb${wip ? " wip" : ""}">${inner}<span class="status${wip ? " wip" : ""}">${esc(p.status)}</span></div>`;
   }
 
   function card(p, i) {
@@ -176,7 +178,7 @@
     ].join("");
 
     return `
-      <article class="card" style="--i:${i};--accent:${esc(p.accent)}">
+      <article class="card${isWip(p) ? " is-wip" : ""}" style="--i:${i};--accent:${esc(p.accent)}">
         ${thumb(p)}
         <h3>${esc(p.title)}</h3>
         <p class="desc">${esc(p.desc)}</p>
