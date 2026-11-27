@@ -1,20 +1,7 @@
-/* =========================================================
-   project.js  —  cards render, filter, 3D tilt
-   Naya project add karna ho to sirf PROJECTS array mein
-   ek object add karo. Order wahi rahega jo array mein hai.
-   ========================================================= */
+
 
 (function () {
-  /* ---------------- DATA (yahan edit karo) ----------------
-     category : ["web" | "ai"]  (ek ya dono)
-     status   : badge ka text. "In Progress" likhoge to orange badge
-                + thumbnail ke left side pe orange banner aa jayega
-     art      : "social" | "shop" | "blog" | "analyst" | ""
-     image    : "" rakho to art dikhega,
-                real screenshot ho to "../assests/beast.png" likho
-                (image di to art ki jagah wahi dikhegi)
-     code/demo: apna link. "" rakho to wo link hide ho jayega
-  ---------------------------------------------------------- */
+
   const PROJECTS = [
     {
       title: "Beast",

@@ -5,30 +5,30 @@
 (function () {
   const EXPERIENCE_DATA = [
     {
-      role: "Developer Intern",
+      role: "IT Intern",
       company: "Teckat (Client: SAIL)",
       location: "Ranchi",
       period: "Nov 2025 – June 2026",
       points: [
-        "Placed by Teckat onsite at SAIL's Research & Development Centre for Iron and Steel (RDCIS) as a backend developer.",
-        "Secured endpoints using JWT authentication (access/refresh tokens) and bcrypt password hashing.",
-        "Designed MVC-compliant REST APIs with Node.js, Express.js, and MongoDB Mongoose models.",
-        "Added Zod request validation on API endpoints and managed related-data cleanup using cascade deletes in Mongoose.",
+        "Worked onsite at SAIL's Research & Development Centre for Iron and Steel (RDCIS) as a backend developer.",
+        "Implemented secure authentication using JWT (access/refresh tokens) and bcrypt password hashing.",
+        "Designed MVC-based REST APIs using Python, FastAPI, and PostgreSQL.",
+        "Implemented request validation and managed relational data integrity using PostgreSQL.",
         "Optimized backend code performance and thoroughly tested API endpoints using Postman."
       ],
-      tags: ["Node.js", "Express.js", "MongoDB", "Mongoose", "JWT", "Bcrypt", "Zod", "Postman"]
+      tags: ["Python", "FastAPI", "Pydantic", "PostgreSQL", "JWT", "Bcrypt", "Postman"]
     },
     {
-      role: "Web & App Development Intern",
+      role: "Web & App developer Intern",
       company: "Teckat",
       location: "Jamshedpur",
       period: "May 2025 – July 2025",
       points: [
-        "Developed backend modules in JavaScript and Node.js, implementing core server-side application logic.",
-        "Built REST API endpoints with Express.js and performed efficient CRUD operations on MongoDB databases.",
-        "Tested API endpoints using Postman, tracked bugs, and collaborated on standard backend development workflows."
+        "Practiced Python fundamentals, functions, data structures, exception handling, and debugging while developing backend applications.",
+        "Built REST API endpoints and performed CRUD operations using PostgreSQL databases.",
+        "Developed backend modules using Python and FastAPI, implementing core server-side application logic."
       ],
-      tags: ["JavaScript", "Node.js", "Express.js", "MongoDB", "REST APIs", "Postman"]
+      tags: ["Python", "FastAPI", "Pydanic", "PostgreSQL", "REST APIs", "Postman"]
     }
   ];
 
